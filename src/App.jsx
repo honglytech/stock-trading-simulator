@@ -1,4 +1,18 @@
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+const router = createBrowserRouter([
+  { path: "/", element: <h1>Home</h1> },
+  {
+    path: "/about",
+    element: (
+      <div>
+        <h2>About page</h2>
+      </div>
+    ),
+  },
+]);
+
 const App = () => {
-  return <div>Stock Trading Simulator</div>;
+  return <RouterProvider router={router} />;
 };
 export default App;
